@@ -1,0 +1,39 @@
+body{
+    background: #353959;
+    background-repeat: no-repeat;
+    background-size: 101vw 100vh;
+}
+#heading{
+    font-size: 4vw;
+    color:whitesmoke;
+    margin-left:35vw;
+    margin-top:-0.5vw;
+    font-weight:bold;
+    font-style:italic;
+    font-family: sans-serif;   
+}
+#header{
+    height:5vw;
+    width:101vw;
+    background-color: rgba(137, 144, 236,0.5);
+    margin-left:-1vw;
+}
+#grid{
+    position: absolute;
+    width:30vw;
+    height:20vh;
+    display:flex;
+    flex-wrap: wrap;
+    left: 35vw;
+    top:35vh;
+}
+img{
+    margin:2px;
+}
+h3{
+    margin-left:34.5vw;
+    margin-top:12vh;
+    font-size:3vw;
+    font-family: sans-serif;
+    color:whitesmoke;
+}
