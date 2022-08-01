@@ -1,51 +1,51 @@
 const cardArray = [
     {
         name: 'fries',
-        img: 'img/fries.png'
+        img: 'images/fries.png'
     },
     {
         name: 'cheeseburger',
-        img: 'img/cheeseburger.png'
+        img: 'images/cheeseburger.png'
     },
     {
         name: 'hotdog',
-        img: 'img/hotdog.png'
+        img: 'images/hotdog.png'
     },
     {
         name: 'ice-cream',
-        img: 'img/ice-cream.png'
+        img: 'images/ice-cream.png'
     },
     {
         name: 'milkshake',
-        img: 'img/milkshake.png'
+        img: 'images/milkshake.png'
     },
     {
         name: 'pizza',
-        img: 'img/pizza.png'
+        img: 'images/pizza.png'
     },
     {
         name: 'fries',
-        img: 'img/fries.png'
+        img: 'images/fries.png'
     },
     {
         name: 'cheeseburger',
-        img: 'img/cheeseburger.png'
+        img: 'images/cheeseburger.png'
     },
     {
         name: 'hotdog',
-        img: 'img/hotdog.png'
+        img: 'images/hotdog.png'
     },
     {
         name: 'ice-cream',
-        img: 'img/ice-cream.png'
+        img: 'images/ice-cream.png'
     },
     {
         name: 'milkshake',
-        img: 'img/milkshake.png'
+        img: 'images/milkshake.png'
     },
     {
         name: 'pizza',
-        img: 'img/pizza.png'
+        img: 'images/pizza.png'
     }
     
 ]
@@ -59,7 +59,7 @@ const cardWon = [];
 const createBoard = ()=>{
     for(let i = 0;i<12;i++){
         const card = document.createElement("img");
-        card.setAttribute('src',"img/blank.png");
+        card.setAttribute('src',"images/blank.png");
         card.setAttribute('id',i);
         card.addEventListener('click',flipcard)
         gridDisplay.appendChild(card);
@@ -68,19 +68,19 @@ const createBoard = ()=>{
 const checkmatch = ()=>{
     const cards = document.querySelectorAll('#grid img')
     if(cardsChosenIds[0]==cardsChosenIds[1]){
-        cards[cardsChosenIds[0]].setAttribute('src',"img/blank.png");
-        cards[cardsChosenIds[1]].setAttribute('src',"img/blank.png");
+        cards[cardsChosenIds[0]].setAttribute('src',"images/blank.png");
+        cards[cardsChosenIds[1]].setAttribute('src',"images/blank.png");
     }
     else if(cardsChosen[0] ==cardsChosen[1]){
-        // cards[cardsChosenIds[0]].setAttribute('src',"img/white.png");
-        // cards[cardsChosenIds[1]].setAttribute('src',"img/white.png");
+        // cards[cardsChosenIds[0]].setAttribute('src',"images/white.png");
+        // cards[cardsChosenIds[1]].setAttribute('src',"images/white.png");
         cards[cardsChosenIds[0]].removeEventListener('click',flipcard);
         cards[cardsChosenIds[1]].removeEventListener('click',flipcard);
         cardWon.push(cardsChosen[0]);
     }
     else{
-        cards[cardsChosenIds[0]].setAttribute('src',"img/blank.png");
-        cards[cardsChosenIds[1]].setAttribute('src',"img/blank.png");
+        cards[cardsChosenIds[0]].setAttribute('src',"images/blank.png");
+        cards[cardsChosenIds[1]].setAttribute('src',"images/blank.png");
     }
     document.getElementById("result").innerText = cardWon.length;
     if(cardWon.length == cardArray.length/2){
